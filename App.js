@@ -16,21 +16,21 @@ export default function App() {
         <LinearGradient
           colors={['#00FFFF', '#ADD8E6']}
           style={styles.button}>
-            <Text>Great!</Text>
+            <Text styles={styles.btnText}>Great!</Text>
         </LinearGradient>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
         <LinearGradient
           colors={['#4169E1', '#1F51FF']}
           style={styles.button}>
-            <Text>Okay!</Text>
+            <Text styles={styles.btnText}>Okay!</Text>
         </LinearGradient>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
         <LinearGradient
           colors={['#0437F2', '#0818A8']}
           style={styles.button}>
-            <Text>Not great!</Text>
+            <Text styles={styles.btnText}>Not great!</Text>
         </LinearGradient>
       </TouchableOpacity>
     </SafeAreaView>
@@ -53,9 +53,18 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 2,
-    padding: 40,
     alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
     borderRadius: 10,
-    width: '100%'
+    width: '100%',
+  },
+  btnText: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: 'bold',
+    letterSpacing: 0.25,
+    color: 'white',
   },
 });
