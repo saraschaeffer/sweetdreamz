@@ -11,18 +11,21 @@
     "startnode": "npx nodemon server/index.js"
   },
   "dependencies": {
+    "apsl-react-native-button": "^3.1.1",
+    "axios": "^0.24.0",
+    "create-react-native-app": "^3.6.0",
     "expo": "~43.0.2",
+    "expo-cli": "^4.13.0",
+    "expo-linear-gradient": "^10.0.3",
     "expo-status-bar": "~1.1.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
+    "react-native-custom-fonts": "^1.2.0-beta.1",
     "react-native-health": "^1.12.0",
-    "react-native-web": "0.17.1",
-    "axios": "^0.24.0",
-    "create-react-native-app": "^3.6.0",
-    "expo-cli": "^4.13.0",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.15"
+    "react-native-web": "0.17.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

@@ -10,5 +10,3 @@ const pool = new Pool({
 });
 
 module.exports = pool;
-
-//testing commits and pushes
