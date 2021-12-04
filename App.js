@@ -1,10 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Button, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, SafeAreaView, Button, TouchableOpacity, ScrollView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 
 export default function App() {
+  const [dreamReviews, setDreamReviews] = useState([
+    { review: 'Great!', key: '1' },
+    { review: 'Okay!', key: '2' },
+    { review: 'Not great!', key: '3'}
+  ])
   return (
     <SafeAreaView style={styles.container}>
       <LinearGradient
@@ -12,14 +17,18 @@ export default function App() {
         style={styles.container}
       />
       <Text style={styles.howdidyousleeptext}>How was your dream?</Text>
-      <TouchableOpacity style={styles.button}>
-        <LinearGradient
-          colors={['#00FFFF', '#ADD8E6']}
-          style={styles.button}>
-            <Text styles={styles.btnText}>Great!</Text>
-        </LinearGradient>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
+      <ScrollView>
+        { dreamReviews.map(dreamReview => (
+          <TouchableOpacity style={styles.button} key={dreamReview.key}>
+          <LinearGradient
+            colors={['#00FFFF', '#ADD8E6']}
+            style={styles.button}>
+              <Text styles={styles.btnText}>{dreamReview.review}</Text>
+          </LinearGradient>
+        </TouchableOpacity>
+        ))}
+      </ScrollView>
+      {/* <TouchableOpacity style={styles.button}>
         <LinearGradient
           colors={['#4169E1', '#1F51FF']}
           style={styles.button}>
@@ -32,7 +41,7 @@ export default function App() {
           style={styles.button}>
             <Text styles={styles.btnText}>Not great!</Text>
         </LinearGradient>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </SafeAreaView>
   );
 }
