@@ -49,3 +49,6 @@ bower_components/
 .floo
 .flooignore
 
+#secrets
+.env
+
