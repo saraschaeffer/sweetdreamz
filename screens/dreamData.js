@@ -2,9 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Button, TouchableOpacity, ScrollView, TextInput } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Path } from 'react-native-svg'
-import { AreaChart, Grid } from 'react-native-svg-charts'
-import * as shape from 'd3-shape'
+import ReactWordcloud from 'react-wordcloud';
+import { Path } from 'react-native-svg';
+import { AreaChart, Grid } from 'react-native-svg-charts';
+import * as shape from 'd3-shape';
 
 class AreaChartExample extends React.PureComponent {
 
@@ -37,3 +38,4 @@ class AreaChartExample extends React.PureComponent {
 }
 
 export default AreaChartExample
+
