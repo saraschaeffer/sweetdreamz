@@ -18,7 +18,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Sweet Dreamz" component={DreamHome} style={styles.container} />
         <Stack.Screen name="Dream Data" component={DreamData} style={styles.container} />
-        <Stack.Screen name="Tell Me" component={TellMeAboutYourDream} style={styles.container} />
+        <Stack.Screen name="Describe Your Dream" component={TellMeAboutYourDream} style={styles.container} />
       </Stack.Navigator>
     </NavigationContainer>
   );

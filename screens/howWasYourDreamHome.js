@@ -24,7 +24,7 @@ export default function DreamHome({ navigation }) {
       <Text style={styles.howdidyousleeptext}>How was your dream?</Text>
       <ScrollView>
         { dreamReviews.map(dreamReview => (
-          <TouchableOpacity style={styles.button} key={dreamReview.key} onPress={() => navigation.navigate('Tell Me')}>
+          <TouchableOpacity style={styles.button} key={dreamReview.key} review={dreamReview.review} onPress={() => navigation.navigate('Describe Your Dream')}>
           <LinearGradient
             colors={['#4682B4', '#00FFFF', '#ADD8E6']}
             style={styles.button}>
