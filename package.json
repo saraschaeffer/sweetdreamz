@@ -11,6 +11,7 @@
     "startnode": "npx nodemon server/index.js"
   },
   "dependencies": {
+    "@react-navigation/material-top-tabs": "^6.0.6",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
     "@react-navigation/stack": "^6.0.11",
@@ -30,10 +31,12 @@
     "react-native-custom-fonts": "^1.2.0-beta.1",
     "react-native-gesture-handler": "~1.10.2",
     "react-native-health": "^1.12.0",
+    "react-native-pager-view": "^5.4.9",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.8.0",
     "react-native-svg": "^12.1.1",
     "react-native-svg-charts": "^5.4.0",
+    "react-native-tab-view": "^3.1.1",
     "react-native-web": "0.17.1",
     "react-wordcloud": "^1.2.7"
   },
