@@ -2,7 +2,6 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Button, TouchableOpacity, ScrollView, TextInput } from 'react-native';
 // import { LinearGradient } from 'expo-linear-gradient';
-import ReactWordcloud from 'react-wordcloud';
 import { Path, Defs, Stop, LinearGradient } from 'react-native-svg';
 import { AreaChart, Grid, PieChart, BarChart, StackedAreaChart } from 'react-native-svg-charts';
 import * as shape from 'd3-shape';
@@ -15,92 +14,92 @@ class BadDream extends React.PureComponent {
     const stackedAreaData = [
       {
           month: 'January',
-          'Blair Waldorf': 3840,
-          'Seth Cohen': 1920,
-          'Hayley James Scott': 960,
-          'Spencer Hastings': 400,
+          'Anxiety': 3,
+          'Fear': 2,
+          'Monster': 1,
+          'Fire': 2,
       },
       {
           month: 'February',
-          'Blair Waldorf': 1600,
-          'Seth Cohen': 1440,
-          'Hayley James Scott': 960,
-          'Spencer Hastings': 400,
+          'Anxiety': 4,
+          'Fear': 4,
+          'Monster': 1,
+          'Fire': 3,
       },
       {
         month: 'March',
-        'Blair Waldorf': 1600,
-        'Seth Cohen': 1440,
-        'Hayley James Scott': 960,
-        'Spencer Hastings': 400,
+        'Anxiety': 3,
+        'Fear': 2,
+        'Monster': 3,
+        'Fire': 3,
       },
       {
         month: 'April',
-        'Blair Waldorf': 1600,
-        'Seth Cohen': 1440,
-        'Hayley James Scott': 960,
-        'Spencer Hastings': 400,
+        'Anxiety': 6,
+        'Fear': 5,
+        'Monster': 5,
+        'Fire': 4,
       },
       {
         month: 'May',
-        'Blair Waldorf': 1600,
-        'Seth Cohen': 1440,
-        'Hayley James Scott': 960,
-        'Spencer Hastings': 400,
+        'Anxiety': 7,
+        'Fear': 9,
+        'Monster': 4,
+        'Fire': 5,
       },
       {
         month: 'June',
-        'Blair Waldorf': 1600,
-        'Seth Cohen': 1440,
-        'Hayley James Scott': 960,
-        'Spencer Hastings': 400,
+        'Anxiety': 6,
+        'Fear': 5,
+        'Monster': 7,
+        'Fire': 7,
       },
       {
         month: 'July',
-        'Blair Waldorf': 1600,
-        'Seth Cohen': 1440,
-        'Hayley James Scott': 960,
-        'Spencer Hastings': 400,
+        'Anxiety': 8,
+        'Fear': 5,
+        'Monster': 7,
+        'Fire': 8,
       },
       {
         month: 'August',
-        'Blair Waldorf': 1600,
-        'Seth Cohen': 1440,
-        'Hayley James Scott': 960,
-        'Spencer Hastings': 400,
+        'Anxiety': 8,
+        'Fear': 4,
+        'Monster': 8,
+        'Fire': 5,
       },
       {
         month: 'September',
-        'Blair Waldorf': 1600,
-        'Seth Cohen': 1440,
-        'Hayley James Scott': 960,
-        'Spencer Hastings': 400,
+        'Anxiety': 6,
+        'Fear': 7,
+        'Monster': 6,
+        'Fire': 7,
       },
       {
         month: 'October',
-        'Blair Waldorf': 1600,
-        'Seth Cohen': 1440,
-        'Hayley James Scott': 960,
-        'Spencer Hastings': 400,
+        'Anxiety': 4,
+        'Fear': 3,
+        'Monster': 2,
+        'Fire': 3,
       },
       {
         month: 'November',
-        'Blair Waldorf': 1600,
-        'Seth Cohen': 1440,
-        'Hayley James Scott': 960,
-        'Spencer Hastings': 400,
+        'Anxiety': 1,
+        'Fear': 3,
+        'Monster': 1,
+        'Fire': 1,
       },
       {
         month: 'December',
-        'Blair Waldorf': 1600,
-        'Seth Cohen': 1440,
-        'Hayley James Scott': 960,
-        'Spencer Hastings': 400,
+        'Anxiety': 1,
+        'Fear': 2,
+        'Monster': 1,
+        'Fire': 1,
       }
   ];
 
         const colors = ['#89CFF0', '#0096FF', '#0F52BA', '#0818A8']
-        const keys = ['Blair Waldorf', 'Seth Cohen', 'Hayley James Scott', 'Spencer Hastings']
+        const keys = ['Anxiety', 'Fear', 'Monster', 'Fire']
 
 
     const Gradient = () => (
@@ -148,10 +147,43 @@ class BadDream extends React.PureComponent {
                 curve={shape.curveNatural}
                 showGrid={false}
             />
+          <View>
+            <View style={styles.anxiety} /><Text>Anxiety</Text>
+            <View style={styles.fear} /><Text>Fear</Text>
+            <View style={styles.monster} /><Text>Monster</Text>
+            <View style={styles.fire} /><Text>Fire</Text>
+          </View>
       </SafeAreaView>
       )
     }
   }
+
+  const styles = StyleSheet.create({
+    anxiety: {
+      width: 20,
+      height: 20,
+      backgroundColor: "#89CFF0",
+      alignItems: 'center'
+    },
+    fear: {
+      width: 20,
+      height: 20,
+      backgroundColor: "#0096FF",
+      alignItems: 'center'
+    },
+    monster: {
+      width: 20,
+      height: 20,
+      backgroundColor: "#0F52BA",
+      alignItems: 'center'
+    },
+    fire: {
+      width: 20,
+      height: 20,
+      backgroundColor: "#0818A8",
+      alignItems: 'center'
+    },
+  });
 
   export default BadDream
 
