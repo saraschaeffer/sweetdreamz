@@ -11,43 +11,97 @@ class GoodDream extends React.PureComponent {
 
   render() {
 
-    const pieData = [ 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80 ];
-    const areaData = [ 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80 ];
-    const barData = [ 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80 ];
+    const barData = [8, 9, 9, 7, 6, 3, 2, 1, 2, 6, 7, 8];
     const stackedAreaData = [
       {
-          month: new Date(2021, 0, 1),
-          'Blair Waldorf': 3840,
-          'Seth Cohen': 1920,
-          'Hayley James Scott': 960,
-          'Spencer Hastings': 400,
+        month: 'January',
+        'Happy': 7,
+        'Love': 6,
+        'Safe': 8,
+        'Sun': 7,
       },
       {
-          month: new Date(2021, 1, 1),
-          'Blair Waldorf': 1600,
-          'Seth Cohen': 1440,
-          'Hayley James Scott': 960,
-          'Spencer Hastings': 400,
+        month: 'February',
+        'Happy': 8,
+        'Love': 8,
+        'Safe': 6,
+        'Sun': 5,
+      },
+      {
+        month: 'March',
+        'Happy': 6,
+        'Love': 7,
+        'Safe': 6,
+        'Sun': 4,
+      },
+      {
+        month: 'April',
+        'Happy': 5,
+        'Love': 5,
+        'Safe': 5,
+        'Sun': 4,
+      },
+      {
+        month: 'May',
+        'Happy': 4,
+        'Love': 3,
+        'Safe': 4,
+        'Sun': 1,
+      },
+      {
+        month: 'June',
+        'Happy': 2,
+        'Love': 2,
+        'Safe': 1,
+        'Sun': 1,
+      },
+      {
+        month: 'July',
+        'Happy': 2,
+        'Love': 1,
+        'Safe': 1,
+        'Sun': 1,
+      },
+      {
+        month: 'August',
+        'Happy': 1,
+        'Love': 2,
+        'Safe': 2,
+        'Sun': 1,
+      },
+      {
+        month: 'September',
+        'Happy': 5,
+        'Love': 4,
+        'Safe': 4,
+        'Sun': 3,
+      },
+      {
+        month: 'October',
+        'Happy': 4,
+        'Love': 6,
+        'Safe': 7,
+        'Sun': 6,
+      },
+      {
+        month: 'November',
+        'Happy': 8,
+        'Love': 7,
+        'Safe': 8,
+        'Sun': 8,
+      },
+      {
+        month: 'December',
+        'Happy': 8,
+        'Love': 9,
+        'Safe': 7,
+        'Sun': 7,
       }
   ];
 
         const colors = ['#89CFF0', '#0096FF', '#0F52BA', '#0818A8']
-        const keys = ['Blair Waldorf', 'Seth Cohen', 'Hayley James Scott', 'Spencer Hastings']
-        // const svgs = [
-        //     { onPress: () => console.log('apples') },
-        //     { onPress: () => console.log('bananas') },
-        //     { onPress: () => console.log('cherries') },
-        //     { onPress: () => console.log('dates') },
-        // ]
+        const keys = ['Happy', 'Love', 'Safe', 'Sun']
 
-    const Line = ({ line }) => (
-        <Path
-            key={'line'}
-            d={line}
-            stroke={'rgb(134, 65, 244)'}
-            fill={'none'}
-        />
-    );
 
     const Gradient = () => (
         <Defs key={'gradient'}>
@@ -60,33 +114,9 @@ class GoodDream extends React.PureComponent {
 
     const randomColor = () => ('#' + (Math.random() * 0xFFFFFF << 0).toString(16) + '000000').slice(0, 7)
 
-    const viewedPieData = pieData
-    .filter(value => value > 0)
-    .map((value, index) => ({
-      value,
-      svg: {
-        fill: randomColor(),
-        onPress: () => console.log('press', index),
-      },
-      key: `pie-${index}`,
-    }))
-
     return (
       <SafeAreaView>
-          <AreaChart
-            style={{ height: 200 }}
-            data={areaData}
-            contentInset={{ top: 30, bottom: 30 }}
-            curve={shape.curveNatural}
-            svg={{ fill: 'rgba(134, 65, 244, 0.2)' }}
-          >
-            <Grid/>
-            <Line/>
-          </AreaChart>
-          {/* <PieChart
-            style={ { height: 200 } }
-            data={ viewedPieData }
-          /> */}
+          <Text>Good Dreams Trends Over Last Twelve Months</Text>
           <BarChart
               style={ { height: 200 } }
               data={ barData }
@@ -99,7 +129,17 @@ class GoodDream extends React.PureComponent {
               <Grid/>
               <Gradient/>
           </BarChart>
-          <Text>Who You Dream About</Text>
+          <Text>{
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n"
+          }</Text>
           <StackedAreaChart
                 style={{ height: 200, paddingVertical: 16 }}
                 data={stackedAreaData}
@@ -108,10 +148,43 @@ class GoodDream extends React.PureComponent {
                 curve={shape.curveNatural}
                 showGrid={false}
             />
+          <View>
+            <View style={styles.happy} /><Text>Happy</Text>
+            <View style={styles.love} /><Text>Love</Text>
+            <View style={styles.safe} /><Text>Safe</Text>
+            <View style={styles.sun} /><Text>Sun</Text>
+          </View>
       </SafeAreaView>
       )
     }
   }
+
+  const styles = StyleSheet.create({
+    happy: {
+      width: 20,
+      height: 20,
+      backgroundColor: "#89CFF0",
+      alignItems: 'center'
+    },
+    love: {
+      width: 20,
+      height: 20,
+      backgroundColor: "#0096FF",
+      alignItems: 'center'
+    },
+    safe: {
+      width: 20,
+      height: 20,
+      backgroundColor: "#0F52BA",
+      alignItems: 'center'
+    },
+    sun: {
+      width: 20,
+      height: 20,
+      backgroundColor: "#0818A8",
+      alignItems: 'center'
+    },
+  });
 
   export default GoodDream
 
